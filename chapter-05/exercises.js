@@ -17,11 +17,10 @@ return output;
 // /////////////////////////////////////////////////////////////////////////////
 
 function loop(n, test, update, body) {
-let output
-for (var i = n; test(i); update(i)) {
-  output = body(i)
+while (test(n) === true) {
+  body(n)
+  n = update(n)
   }
-  return output
 }
 
 // /////////////////////////////////////////////////////////////////////////////
